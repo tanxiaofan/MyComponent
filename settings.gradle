@@ -1,0 +1,11 @@
+include ':app',
+
+        ':module_login',
+        ':module_personal',
+        ':module_main',
+        ':module_news',
+        ':module_home',
+
+        ':base',
+        ':router_interface'
+rootProject.name = 'MyComponent'

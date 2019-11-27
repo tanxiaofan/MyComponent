@@ -1,0 +1,18 @@
+apply from: "$rootProject.projectDir/buildScript/module_build_script.gradle"
+
+def module_name = "home"
+
+android {
+    defaultConfig {
+        if (run_alone.toBoolean()) {
+            applicationId "com.github.tanxiaofan.${module_name}"
+        }
+        versionCode 1
+        versionName "1.0"
+    }
+    resourcePrefix "${module_name}_"
+}
+
+dependencies {
+    implementation project(':base')
+}

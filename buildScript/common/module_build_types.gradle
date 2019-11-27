@@ -1,0 +1,12 @@
+//子模块 buildTypes 配置脚本
+//引入方式 apply from: "$rootProject.projectDir/buildScript/common/module_build_types.gradle"
+android {
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}

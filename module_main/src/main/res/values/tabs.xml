@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="main_tab_home" formatted="true" translatable="false">"/home/main_fragment"</string>
+    <string name="main_tab_news" formatted="true" translatable="false">"/news/main_fragment"</string>
+    <string name="main_tab_personal" formatted="true" translatable="false">"/personal/main_fragment"</string>
+</resources>

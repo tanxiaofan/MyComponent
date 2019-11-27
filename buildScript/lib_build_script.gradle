@@ -1,0 +1,11 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+apply from: "$rootProject.projectDir/buildScript/common/arouter_build.gradle"
+apply from: "$rootProject.projectDir/buildScript/common/common_build.gradle"
+apply from: "$rootProject.projectDir/buildScript/common/module_build_types.gradle"
+
+project.dependencies.add("implementation", fileTree(include: ['*.jar'], dir: 'libs'))
+

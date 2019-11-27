@@ -1,0 +1,2 @@
+# Arouter
+ARouter允许一个module中存在多个分组，但是不允许多个module中存在相同的分组，会导致映射文件冲突

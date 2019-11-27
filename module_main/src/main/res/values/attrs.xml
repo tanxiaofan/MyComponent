@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    一个 tab-->
+    <declare-styleable name="MainTab">
+        <!--        tab 标题-->
+        <attr name="main_tab_name" format="string|reference" />
+        <!--        tab 标签，同时也是路由的 path-->
+        <attr name="main_tab_tag" format="string|reference" />
+    </declare-styleable>
+
+    <!--    所有 tab 的容器-->
+    <declare-styleable name="MainTabGroup">
+        <!--        fragment 容器-->
+        <attr name="main_tab_group_container" format="reference" />
+        <!--        所有 tab 的布局-->
+        <attr name="main_tab_group_layout" format="reference" />
+    </declare-styleable>
+</resources>

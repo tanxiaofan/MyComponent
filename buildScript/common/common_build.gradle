@@ -1,0 +1,53 @@
+//通用配置
+//引入方式 apply from: "$rootProject.projectDir/buildScript/common/common_build.gradle"
+project.dependencies.add("implementation", fileTree(include: ['*.jar'], dir: 'libs'))
+
+//test
+project.dependencies.add("testImplementation", "junit:junit:4.12")
+project.dependencies.add("androidTestImplementation", "androidx.test:runner:1.2.0")
+project.dependencies.add("androidTestImplementation", "androidx.test.espresso:espresso-core:3.2.0")
+
+android {
+    compileSdkVersion compile_sdk_version.toInteger()
+    buildToolsVersion build_tools_version.toString()
+
+    defaultConfig {
+        minSdkVersion min_sdk_version.toInteger()
+        targetSdkVersion target_sdk_version.toInteger()
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    //JDK1.8
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        //set Kotlin compilers to target Java 8
+        jvmTarget = "1.8"
+        //JvmDefault兼容模式,contract契约
+        freeCompilerArgs = ['-Xjvm-default=compatibility', '-Xuse-experimental=kotlin.contracts.ExperimentalContracts']
+    }
+
+    dexOptions {
+        jumboMode = true
+        javaMaxHeapSize "4g" //specify the heap size for the dex process
+    }
+
+    //kotlin插件kotlin-android-extensions增强功能
+    androidExtensions {
+        experimental = true
+    }
+
+    lintOptions {
+        //忽略strings翻译问题
+        disable 'MissingTranslation'
+        // if set to true (default), stops the build if errors are found.
+        abortOnError false
+        // if true, only report errors.
+        ignoreWarnings true
+    }
+}

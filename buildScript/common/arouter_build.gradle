@@ -1,0 +1,12 @@
+//Arouter 配置脚本
+//引入方式 apply from: "$rootProject.projectDir/buildScript/common/arouter_build.gradle"
+android {
+    kapt {
+        arguments {
+            arg("AROUTER_MODULE_NAME", project.getName())
+        }
+    }
+
+    project.dependencies.add("implementation", "com.alibaba:arouter-api:1.5.0")
+    project.dependencies.add("kapt", "com.alibaba:arouter-compiler:1.2.2")
+}

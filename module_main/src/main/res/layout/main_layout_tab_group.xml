@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.github.tanxiaofan.main.tab.MainTab
+        android:id="@+id/tab_home"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tab_news"
+        app:layout_constraintStart_toStartOf="parent"
+        app:main_tab_name="home"
+        app:main_tab_tag="@string/main_tab_home" />
+
+    <com.github.tanxiaofan.main.tab.MainTab
+        android:id="@+id/tab_news"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tab_personal"
+        app:layout_constraintStart_toEndOf="@+id/tab_home"
+        app:main_tab_name="news"
+        app:main_tab_tag="@string/main_tab_news" />
+
+    <com.github.tanxiaofan.main.tab.MainTab
+        android:id="@+id/tab_personal"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tab_news"
+        app:main_tab_name="personal"
+        app:main_tab_tag="@string/main_tab_personal" />
+</merge>

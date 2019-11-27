@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="dealClick"
+        android:text="login page" />
+
+    <Button
+        android:id="@+id/btn_login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="dealClick"
+        android:text="password page" />
+
+    <Button
+        android:id="@+id/btn_is_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="dealClick"
+        android:text="is login" />
+
+    <Button
+        android:id="@+id/btn_personal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="dealClick"
+        android:text="personal" />
+
+    <Button
+        android:id="@+id/btn_scheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="dealClick"
+        android:text="scheme" />
+
+    <Button
+        android:id="@+id/btn_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="dealClick"
+        android:text="show" />
+</LinearLayout>

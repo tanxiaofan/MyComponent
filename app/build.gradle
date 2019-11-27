@@ -1,0 +1,33 @@
+apply from: "$rootProject.projectDir/buildScript/app_build_script.gradle"
+
+android {
+
+
+    defaultConfig {
+        applicationId "com.github.tanxiaofan.mycomponent"
+
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+
+    implementation project(':base')
+    implementation project(':router_interface')
+
+    if (!run_alone.toBoolean()){
+        implementation project(':module_main')
+        runtimeOnly project(':module_login')
+        runtimeOnly project(':module_personal')
+        runtimeOnly project(':module_news')
+        runtimeOnly project(':module_home')
+    }
+}
