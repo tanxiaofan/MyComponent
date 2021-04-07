@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
-    </application>
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="name,allowBackup,icon,label,roundIcon,supportsRtl,theme" />
 
 </manifest>

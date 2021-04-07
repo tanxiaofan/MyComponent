@@ -2,7 +2,27 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.github.tanxiaofan.news">
 
-    <application>
+    <application
+        android:name="com.github.tanxiaofan.base.BaseApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/news_ic_launcher"
+        android:label="@string/news_app_name"
+        android:roundIcon="@mipmap/news_ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity-alias
+            android:name="real"
+            android:enabled="@bool/run_alone"
+            android:icon="@mipmap/news_ic_launcher"
+            android:label="@string/app_name"
+            android:targetActivity=".NewsDetailActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
         <activity android:name=".NewsDetailActivity" />
     </application>
 

@@ -12,19 +12,3 @@ apply plugin: 'kotlin-kapt'
 apply from: "$rootProject.projectDir/buildScript/common/arouter_build.gradle"
 apply from: "$rootProject.projectDir/buildScript/common/common_build.gradle"
 apply from: "$rootProject.projectDir/buildScript/common/module_build_types.gradle"
-
-
-android {
-    sourceSets {
-        main {
-            if (isRunAlone) {
-                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
-            } else {
-                manifest.srcFile 'src/main/AndroidManifest.xml'
-                java {
-                    exclude '**/debug/**'
-                }
-            }
-        }
-    }
-}

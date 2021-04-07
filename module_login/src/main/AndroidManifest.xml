@@ -1,7 +1,29 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.github.tanxiaofan.login">
 
-    <application>
+    <application
+        android:name="com.github.tanxiaofan.base.BaseApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/login_ic_launcher"
+        android:label="@string/login_app_name"
+        android:roundIcon="@mipmap/login_ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity-alias
+            android:name="real"
+            android:enabled="@bool/run_alone"
+            android:icon="@mipmap/login_ic_launcher"
+            android:label="@string/app_name"
+            android:targetActivity=".LoginActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
         <activity android:name=".LoginActivity" />
     </application>
 </manifest>

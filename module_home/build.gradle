@@ -9,6 +9,8 @@ android {
         }
         versionCode 1
         versionName "1.0"
+
+        resValue "bool", "run_alone", run_alone
     }
     resourcePrefix "${module_name}_"
 }
